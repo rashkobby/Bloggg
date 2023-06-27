@@ -18,6 +18,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/blogs" element={<Home />} />
             <Route path="/addnew" element={<CreateBlog />} />
             <Route path="/blogs/:_id" element={<BlogDetails />}/>   
             <Route path="/update/:id" element={<UpdateBlog />} />     
