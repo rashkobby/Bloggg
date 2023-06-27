@@ -22,7 +22,7 @@ const BlogDetails = () => {
     (e) => {
       e.preventDefault();
       if (blog && blog._id) {
-        axios.delete(`http://localhost:3000/blogs/${blog._id}`).then(() => {
+        axios.delete(`https://bloggg-56sc.onrender.com/blogs/${blog._id}`).then(() => {
           console.log('deleted successfully')
           navigate('/');
         });

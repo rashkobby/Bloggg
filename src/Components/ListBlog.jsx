@@ -10,7 +10,7 @@ const ListBlog = ({ blogs }) => {
         const randomNumber = RandomNumber();
         return (
           <div className="blog-preview" key={blog._id}>
-            <Link to={`/blogs/${blog._id}`}>
+            <Link to={`/blog/${blog._id}`}>
               <div className="mb-6 flex flex-wrap">
                 <div className="mb-2 w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-3/12">
                   <div className="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
