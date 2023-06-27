@@ -74,7 +74,7 @@ const CreateBlog = ({id}) => {
       <form action="POST" onSubmit={handleSubmit}>
         <div className="fields">
           <label htmlFor="title">Title:</label>
-          <input type="text" id="title" className="text-neutral-800 font-bold"  name="title" required maxLength="50" value={title} onChange={(e) => setTitle(e.target.value)}/>
+          <input type="text" id="title" className="text-neutral-800 font-bold"  name="title" required maxLength="70" value={title} onChange={(e) => setTitle(e.target.value)}/>
         </div>
         <div className="fields">
           <label htmlFor="author">Author:</label>
