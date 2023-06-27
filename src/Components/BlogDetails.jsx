@@ -92,7 +92,9 @@ const BlogDetails = () => {
 
           <div>
             <h1 className="mb-6 text-3xl font-bold">{blog.title}</h1>
-            <p> {blog.body} </p>
+            {blog.body.split('\n\n').map((paragraph, index) => (
+              <p key={index} style={{ marginBottom: '1rem' }}>{paragraph}</p>
+            ))}
           </div>
         </section>
       )}
