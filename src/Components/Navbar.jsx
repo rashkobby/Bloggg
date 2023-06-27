@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Blogs', path: '/' },
-    { name: 'Create Blog post', path: 'addnew' },
+    { name: 'Create Blog', path: 'addnew' },
   ];
 
   return (
