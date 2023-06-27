@@ -95,8 +95,8 @@ const CreateBlog = ({id}) => {
           <label htmlFor="details">Content:</label>
           <textarea id="details" className="text-neutral-800 p-4 font-bold"  name="details" cols="80" rows="10"  value={body} onChange={(e) => setBody(e.target.value)}></textarea>
         </div>
-        <button className=" btn bg-neutral-400 text-neutral-800 " type="submit">
-            {!isPending ? (id ? 'Update' : 'Post') : (id ? <Spinner/> : <Spinner/>)}
+        <button className=" btn bg-neutral-400 text-neutral-800 p-2 " type="submit">
+            {!isPending ? (id ? 'Update' : 'Post') : (id ? <span><Spinner/></span> : <span><Spinner/></span>)}
         </button>
 
       </form>
