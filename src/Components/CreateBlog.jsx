@@ -23,7 +23,7 @@ const CreateBlog = ({id}) => {
 
     useEffect(() => {
       if (id) {
-        axios.get(`http://localhost:3000/blogs/${id}`)
+        axios.get(`https://bloggg-56sc.onrender.com/blogs/${id}`)
           .then(response => {
             const { title, body, category, author } = response.data;
             setTitle(title);
@@ -59,9 +59,9 @@ const CreateBlog = ({id}) => {
       e.preventDefault();
       const blog = { title, author, category, body, date };
       if (id) {
-        handleApiCall('put', `http://localhost:3000/blogs/${id}`, blog);
+        handleApiCall('put', `https://bloggg-56sc.onrender.com/blogs/${id}`, blog);
       } else {
-        handleApiCall('post', 'http://localhost:3000/blogs', blog);
+        handleApiCall('post', 'https://bloggg-56sc.onrender.com/blogs', blog);
       }
     };
 

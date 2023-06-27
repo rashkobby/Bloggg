@@ -46,7 +46,7 @@ const BlogDetails = () => {
   return (
     <div className="container my-24 mx-auto md:px-6">
       {error && <h2 className='text-center'>{error}</h2>}
-      {isLoading && <Spinner/>}
+      {isLoading && <span className='flex item-center justify-center '><Spinner className/></span>}
       {blog && (
         <section className="flex flex-col justify-center mb-32 mx-4">
           <img
