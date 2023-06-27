@@ -10,8 +10,8 @@ const Home = function () {
   return (
     <div className="Home">
       {error && <h2>{error}</h2>}
-      {isLoading && <Spinner/>}
-      {blogs && <ListBlog blogs={blogs} />}
+      {isLoading && <span className='flex item-center justify-center mt-32 '><Spinner/></span>}
+      {blogs && <ListBlog blogs={blogs} />}  
     </div>
   );
 };
