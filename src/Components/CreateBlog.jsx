@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import Spinner from '../Utils/Spinner';
 
+
 const getCurrentDate = () => {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
@@ -73,15 +74,15 @@ const CreateBlog = ({id}) => {
       <form action="POST" onSubmit={handleSubmit}>
         <div className="fields">
           <label htmlFor="title">Title:</label>
-          <input type="text" id="title" name="title" required maxLength="50" value={title} onChange={(e) => setTitle(e.target.value)}/>
+          <input type="text" id="title" className="text-neutral-800 font-bold"  name="title" required maxLength="50" value={title} onChange={(e) => setTitle(e.target.value)}/>
         </div>
         <div className="fields">
           <label htmlFor="author">Author:</label>
-          <input type="text" id="author" name="author" required maxLength="50"value={author} onChange={(e) => setAuthor(e.target.value)}/>
+          <input type="text" id="author" className="text-neutral-800 font-bold"  name="author"  required maxLength="50"value={author} onChange={(e) => setAuthor(e.target.value)}/>
         </div>
         <div className="fields">
           <label>Category:</label>
-          <select required value={category} onChange={(e) => setCategory(e.target.value)}>
+          <select required value={category} className="text-neutral-800 font-bold"  onChange={(e) => setCategory(e.target.value)}>
             <option value="Tech">Tech</option>
             <option value="Food">Food</option>
             <option value="Finance">Finance</option>
@@ -92,9 +93,9 @@ const CreateBlog = ({id}) => {
         </div>
         <div className="fields">
           <label htmlFor="details">Content:</label>
-          <textarea id="details" name="details" cols="80" rows="10"  value={body} onChange={(e) => setBody(e.target.value)}></textarea>
+          <textarea id="details" className="text-neutral-800 p-4 font-bold"  name="details" cols="80" rows="10"  value={body} onChange={(e) => setBody(e.target.value)}></textarea>
         </div>
-        <button className="btn w-screen" type="submit">
+        <button className=" btn bg-neutral-400 text-neutral-800 " type="submit">
             {!isPending ? (id ? 'Update' : 'Post') : (id ? <Spinner/> : <Spinner/>)}
         </button>
 
