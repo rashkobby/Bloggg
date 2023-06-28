@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import RandomNumber from '../Utils/RandomNum';
 
-const ListBlog = ({ blogs }) => {
-  
-  return (
+ const ListBlog = ({ blogs }) => {
+  const reversedBlogs = [...blogs].reverse();
+   return (
     <div className="bloglist mt-24 mb-24">
       <h1 className='text-center font-large text-md'>STORIES</h1>
-      {blogs.reverse().map((blog) => {
+      {reversedBlogs.map((blog) => {
         const randomNumber = RandomNumber();
         return (
           <div className="blog-preview" key={blog._id}>
@@ -21,8 +21,7 @@ const ListBlog = ({ blogs }) => {
                     </span>
                   </div>
                 </div>
-
-                <div className="mb-6 items-center w-full shrink-0 grow-0 basis-auto px-3  md:mb-0 md:w-9/12 xl:w-7/12">
+                 <div className="mb-6 items-center w-full shrink-0 grow-0 basis-auto px-3  md:mb-0 md:w-9/12 xl:w-7/12">
                   <h5 className="mb-3 text-lg text-neutral-700 dark:text-neutral-500 font-bold">{blog.title}</h5>
                   <div className="mb-3 flex text-sm font-medium text-neutral dark:text-neutral-400 md:justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="mr-2 h-4 w-4">
@@ -46,5 +45,4 @@ const ListBlog = ({ blogs }) => {
     </div>
   );
 }
-
-export default ListBlog;
+ export default ListBlog;
